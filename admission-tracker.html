@@ -856,9 +856,9 @@ function loadFromSheets() {
   const btn = document.getElementById('load-sheets-btn');
   btn.textContent = '&#9203; Loading...'; btn.disabled = true;
   Promise.all([
-    fetch(csvUrl(0)).then(r => { if(!r.ok) throw new Error('Make sure the sheet is shared as "Anyone with link can view"'); return r.text(); }).then(parseCSV),
-    fetch(csvUrl(1)).then(r => r.text()).then(parseCSV),
-    fetch(csvUrl(2)).then(r => r.text()).then(parseCSV),
+    fetch(csvUrl(1860871376)).then(r => { if(!r.ok) throw new Error('Make sure the sheet is shared as "Anyone with link can view"'); return r.text(); }).then(parseCSV),
+    fetch(csvUrl(158100053)).then(r => r.text()).then(parseCSV),
+    fetch(csvUrl(1896354977)).then(r => r.text()).then(parseCSV),
   ]).then(([activity, tech, checklist]) => {
     const map = {};
     activity.slice(1).forEach((row, i) => {
